@@ -1,11 +1,9 @@
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.Scanner;
+import java.util.*;
 
 public class Calculator {
     static void getValue() {
         String[] operation = {"-", "+", "*", "/"};
-        LinkedList<Double> listResult = new LinkedList<>();
+        Deque<Double> listResult = new ArrayDeque<>();
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите первое число: ");
         double first = scanner.nextDouble();
@@ -49,7 +47,7 @@ public class Calculator {
                 }
             }
             System.out.printf("%s%.2f\n", value, result);
-            listResult.add(result);
+            listResult.addLast(result);
             first = result;
         }
     }

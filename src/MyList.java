@@ -1,11 +1,11 @@
 import java.util.LinkedList;
 
 public class MyList {
-    LinkedList<Integer> myList;
-    public MyList(LinkedList<Integer> listInt) {
+    private final LinkedList<Integer> myList;
+    MyList(LinkedList<Integer> listInt) {
         this.myList = listInt;
     }
-    public LinkedList<Integer> reverse(LinkedList<Integer> listInt){
+    LinkedList<Integer> reverse(LinkedList<Integer> listInt){
         LinkedList<Integer> temp = new LinkedList<>();
         for (Integer i: listInt) {
             temp.addFirst(i);
@@ -21,8 +21,7 @@ public class MyList {
     int first(){
         return myList.getFirst();
     }
-
-    public LinkedList<Integer> getMyList() {
+     LinkedList<Integer> getMyList() {
         return myList;
     }
 }
